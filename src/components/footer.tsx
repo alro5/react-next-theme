@@ -8,5 +8,5 @@ export default function Footer(props: FooterProps): JSX.Element {
 
   const { } = props;
 
-  return <footer>Footer</footer>
+  return <footer className="footer">Footer</footer>
 }

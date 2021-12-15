@@ -1,0 +1,20 @@
+.user-list {
+  ul {
+    display: grid;
+    gap: 12px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      a {
+        display: block;
+        background-color: $component-bg-color;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        padding: 12px 16px;
+        color: $text-color-dark;
+        text-decoration: none;
+      }
+    }
+  }
+}

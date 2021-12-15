@@ -1,0 +1,27 @@
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 100vh;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 250px) minmax(0, 1fr);
+  &__content {
+    overflow-y: auto;
+    height: 100vh;
+    &__inner {
+      padding: 40px 20px;
+      min-height: 100vh;
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+
+.wrap {
+  width: 1200px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

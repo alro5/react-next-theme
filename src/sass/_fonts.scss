@@ -1,0 +1,25 @@
+h1,
+.h1 {
+  @include rhythm(52, 62);
+  margin: 0 0 20px;
+}
+h2,
+.h2 {
+  @include rhythm(46, 58);
+  margin: 0 0 20px;
+}
+h3,
+.h3 {
+  @include rhythm(38, 46);
+  margin: 0 0 20px;
+}
+h4,
+.h4 {
+  @include rhythm(30, 40);
+  margin: 0 0 20px;
+}
+h5,
+.h5 {
+  @include rhythm(22, 32);
+  margin: 0 0 20px;
+}
