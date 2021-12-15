@@ -23,3 +23,7 @@ h5,
   @include rhythm(22, 32);
   margin: 0 0 20px;
 }
+
+p {
+  @include rhythm(16, 28);
+}
