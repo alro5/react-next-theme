@@ -12,11 +12,10 @@ export function UserProfile(props: UserProfileProps): JSX.Element {
   if (isError) return <div>Error</div>
 
   return <div className="user-profile">
-    <img src={user.picture.large} alt={user.name.first} />
     <p>
-      {user.name.first} {user.name.last}, {user.gender}, {user.dob.age} <br />
+      {user.name}<br />
       {user.phone} <br />
-      {user.location.city}
+      {user.address}
     </p>
   </div>
 }
