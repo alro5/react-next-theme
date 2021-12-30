@@ -27,3 +27,11 @@ h5,
 p {
   @include rhythm(16, 28);
 }
+
+.font-display {
+  font-family: $font-family-display;
+}
+
+.text-muted {
+  color: $text-color-muted;
+}

@@ -2,4 +2,23 @@
   width: 250px;
   height: 100vh;
   background-color: $primary-color;
+  padding: 20px;
+  nav {
+    a {
+      @include transition(background-color 300ms ease);
+      @include rhythm(24, 32);
+      font-family: $font-family-display;
+      display: block;
+      text-decoration: none;
+      color: $text-color-light;
+      margin-bottom: 0;
+      font-weight: $font-weight-bold;
+      background-color: $primary-color;
+      padding: 10px;
+      border-radius: $border-radius;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
 }

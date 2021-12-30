@@ -1,0 +1,17 @@
+button {
+  @include transition(background-color, 300ms ease);
+  font-family: $font-family-base;
+  background-color: $primary-color;
+  color: $white;
+  appearance: none;
+  border: 0;
+  border-radius: $border-radius;
+  padding: 10px 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

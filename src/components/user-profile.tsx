@@ -10,7 +10,7 @@ export function UserProfile(props: UserProfileProps): JSX.Element {
   const router = useRouter()
   const { uid } = router.query;
 
-  const { user, isLoading, isError } = useGetUser(uid as string);
+  const { user, isLoading, isError } = useGetUser(uid as any);
 
   if (isLoading) return <div>Loading...</div>
   if (isError) return <div>Error</div>
@@ -19,8 +19,7 @@ export function UserProfile(props: UserProfileProps): JSX.Element {
     <img src="https://thiscatdoesnotexist.com/" alt="Cat" />
     <p>
       {user.name}<br />
-      {user.phone} <br />
-      {user.address.street}
+      {user.email} <br />
     </p>
   </div>
 }

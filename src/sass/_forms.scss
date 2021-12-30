@@ -1,0 +1,44 @@
+form {
+  width: 550px;
+  max-width: 100%;
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input {
+    appearance: none;
+    border: none;
+    &[type="text"],
+    &[type="number"],
+    &[type="tel"],
+    &[type="email"] {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid $border-color;
+    }
+    + .form__msg {
+      margin-top: 8px;
+    }
+  }
+  .form__row {
+    margin-bottom: 20px;
+  }
+  .form__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.form__msg {
+  margin: 0;
+  &--success {
+    color: $text-color-success;
+  }
+  &--error {
+    color: $text-color-error;
+  }
+}
