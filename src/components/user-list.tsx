@@ -5,8 +5,11 @@ import { useAllUsers } from '../../hooks/user';
 import { post, remove } from '../../services/services';
 import { useModal } from "react-modal-hook";
 import { UserModal } from './modals/user-modal';
+import { SERVER_URL } from '../../const/const';
 
 export function UserList(): JSX.Element {
+
+  console.log('SERVER_URL :', SERVER_URL);
 
   const { users, isLoading, isError } = useAllUsers();
   const { mutate } = useSWRConfig();
@@ -16,16 +19,16 @@ export function UserList(): JSX.Element {
   });
 
   async function deleteUser(id: string) {
-    await remove(`/api/user/${id}`).then(_ => {
-      mutate(`/api/users`);
+    await remove(`${SERVER_URL}/api/user/${id}`).then(_ => {
+      mutate(`${SERVER_URL}/api/users`);
     }).catch(e => {
       console.log('e :', e);
     });
   }
 
   async function addNewUser(user: { name: string, email: string }) {
-    await post('/api/users', user).then(_ => {
-      mutate('/api/users');
+    await post(`${SERVER_URL}/api/users`, user).then(_ => {
+      mutate(`${SERVER_URL}/api/users`);
       hideModal();
     }).catch(e => {
       setError(e);

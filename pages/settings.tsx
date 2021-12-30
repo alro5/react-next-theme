@@ -2,6 +2,7 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useSWRConfig } from "swr";
+import { SERVER_URL } from "../const/const";
 import { update } from '../services/services';
 import { ErrorField } from "../src/components/error-field";
 
@@ -13,8 +14,8 @@ const Settings = () => {
   const { mutate } = useSWRConfig();
 
   async function updateUser(user: { name: string, email: string, id: string }) {
-    await update('/api/user', user).then(_ => {
-      mutate('/api/user');
+    await update(`${SERVER_URL}/api/user`, user).then(_ => {
+      mutate(`${SERVER_URL}/api/user`);
       setSaved(true);
     }).catch(e => {
       console.log('e :', e);
