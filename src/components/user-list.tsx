@@ -16,16 +16,16 @@ export function UserList(): JSX.Element {
   });
 
   async function deleteUser(id: string) {
-    await remove(`http://localhost:3001/api/user/${id}`).then(_ => {
-      mutate(`http://localhost:3001/api/users`);
+    await remove(`/api/user/${id}`).then(_ => {
+      mutate(`/api/users`);
     }).catch(e => {
       console.log('e :', e);
     });
   }
 
   async function addNewUser(user: { name: string, email: string }) {
-    await post('http://localhost:3001/api/users', user).then(_ => {
-      mutate('http://localhost:3001/api/users');
+    await post('/api/users', user).then(_ => {
+      mutate('/api/users');
       hideModal();
     }).catch(e => {
       setError(e);
