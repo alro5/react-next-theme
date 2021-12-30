@@ -15,7 +15,7 @@ export function UserList(): JSX.Element {
     code: ''
   });
 
-  async function deleteUser(id: number) {
+  async function deleteUser(id: string) {
     await remove(`http://localhost:3001/api/user/${id}`).then(_ => {
       mutate(`http://localhost:3001/api/users`);
     }).catch(e => {
