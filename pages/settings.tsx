@@ -14,8 +14,8 @@ const Settings = () => {
   const { mutate } = useSWRConfig();
 
   async function updateUser(user: { name: string, email: string, id: string }) {
-    await update(`${SERVER_URL}/api/user`, user).then(_ => {
-      mutate(`${SERVER_URL}/api/user`);
+    await update(`/api/users/${user.id}`, user).then(_ => {
+      mutate(`/api/users`);
       setSaved(true);
     }).catch(e => {
       console.log('e :', e);

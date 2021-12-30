@@ -4,7 +4,6 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "server": "nodemon server/index.ts",
     "studio": "npx prisma studio",
     "migrate": "npx prisma migrate dev"
   },

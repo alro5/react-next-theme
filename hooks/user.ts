@@ -4,7 +4,7 @@ import { SERVER_URL } from "../const/const";
 import { fetcher } from "../utils/shared";
 
 export function useGetUser(id: number) {
-  const { data, error } = useSWR(`${SERVER_URL}/api/user/${id}`, fetcher);
+  const { data, error } = useSWR(`/api/users/${id}`, fetcher);
 
   return {
     user: data as User,
@@ -14,7 +14,7 @@ export function useGetUser(id: number) {
 }
 
 export function useAllUsers() {
-  const { data, error } = useSWR(`${SERVER_URL}/api/users`, fetcher);
+  const { data, error } = useSWR(`/api/users`, fetcher);
 
   return {
     users: data as User[],
