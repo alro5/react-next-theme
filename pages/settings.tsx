@@ -13,8 +13,8 @@ const Settings = () => {
   const { mutate } = useSWRConfig();
 
   async function updateUser(user: { name: string, email: string, id: string }) {
-    await update('http://localhost:3001/api/user', user).then(_ => {
-      mutate('http://localhost:3001/api/user');
+    await update('/api/user', user).then(_ => {
+      mutate('/api/user');
       setSaved(true);
     }).catch(e => {
       console.log('e :', e);

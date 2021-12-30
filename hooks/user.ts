@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { fetcher } from "../utils/shared";
 
 export function useGetUser(id: number) {
-  const { data, error } = useSWR(`http://localhost:3001/api/user/${id}`, fetcher);
+  const { data, error } = useSWR(`/api/user/${id}`, fetcher);
 
   return {
     user: data as User,
@@ -13,7 +13,7 @@ export function useGetUser(id: number) {
 }
 
 export function useAllUsers() {
-  const { data, error } = useSWR(`http://localhost:3001/api/users`, fetcher);
+  const { data, error } = useSWR(`/api/users`, fetcher);
 
   return {
     users: data as User[],
