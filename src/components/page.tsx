@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { PropsWithChildren } from "react";
 
-const authPages = ["/settings"]
+const authPages = ["/settings"];
 
 export default function Page(props: PropsWithChildren<{}>) {
   const { data: session, status } = useSession();

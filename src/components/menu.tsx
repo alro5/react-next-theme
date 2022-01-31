@@ -14,6 +14,9 @@ export function Menu(): JSX.Element {
       <Link href="/users">
         <a>Users</a>
       </Link>
+      <Link href="/meals">
+        <a>Meals</a>
+      </Link>
     </nav>
   </div>
 }
